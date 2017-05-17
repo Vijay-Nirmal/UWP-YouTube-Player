@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="UWPYouTubePlayer.VideoPlayerPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPYouTubePlayer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:themes="using:UWPYouTubePlayer.Themes"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <MediaPlayerElement  Name="YoutubePlayer" MaxWidth="640" MaxHeight="360" AreTransportControlsEnabled="True">
+            <MediaPlayerElement.TransportControls>
+                <themes:CustomMediaTransportControls x:Name="CustomMediaControl" IsSkipBackwardButtonVisible="True" IsSkipForwardButtonVisible="True" IsSkipBackwardEnabled="True" IsSkipForwardEnabled="True" IsFullWindowButtonVisible="True" IsFullWindowEnabled="True" QualityChanged="CustomMediaControl_QualityChangedAsync"/>
+            </MediaPlayerElement.TransportControls>
+        </MediaPlayerElement>
+    </Grid>
+</Page>
